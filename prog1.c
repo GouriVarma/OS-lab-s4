@@ -1,5 +1,5 @@
 /*Note a program to create 2 processes.
-One parent process must add number upto limit n,at the sametime child process must add even numbers upto n,also print the process id*/
+One parent process must add odd number upto limit n,at the sametime child process must add even numbers upto n,also print the process id*/
 
 #include<stdio.h>
 #include<sys/types.h>
@@ -29,6 +29,6 @@ int main()
       a2 = a2+i;
     }
     printf("Sum of odd numbers upto %d:%d ",n,a2);
-    printf("\nThe Parent process id is: %d",getppid());
+    printf("\nThe Parent process id is: %d\n",getppid());
   }
 }
