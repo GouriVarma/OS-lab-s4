@@ -60,7 +60,8 @@ int main()
 	int n; 
 	int blockSize[] = {100, 500, 200, 300, 600};
 	int processSize[] = {212, 417, 112, 426};
-	m = sizeof(blockSize) / sizeof(blockSize1[0]);
-	n = sizeof(processSize) / sizeof(processSize1[0]);
+	m = sizeof(blockSize) / sizeof(blockSize[0]);
+	n = sizeof(processSize) / sizeof(processSize[0]);
+	bestFit(blockSize, m, processSize,n);
   return 0;
 }
