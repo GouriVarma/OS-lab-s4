@@ -9,7 +9,7 @@ int main()
 	for(i=0;i<n;i++)
 		scanf("%d%d%d",&prc[i],&At[i],&Bt[i]);
 
-//Sorting according to arrival time (selection sort)
+
 	int t,pos;
 	for(i=0;i<n;i++)
 	{
@@ -32,7 +32,7 @@ int main()
 	prc[i]=prc[pos];
 	prc[pos]=t;
 	}		
-// Waiting time calculation
+
 	int Wt[n];
 	for(int i=0;i<n;i++)
 	{	
@@ -47,7 +47,7 @@ int main()
 	burst+= Bt[i];
 	}
 	
-//Turn Around Time Calculation 	
+ 	
 	int Ta[n];
 	int temp=0;
 	for(int i=0;i<n;i++)
@@ -56,7 +56,7 @@ int main()
 		Ta[i]=temp-At[i];
 	}
 	
-//Displaying the table with Waiting time and turn around time
+
 	printf("\nPno\tBT\tAT\tWT\tTA");
 	for(i=0;i<n;i++)
 	{
@@ -64,22 +64,22 @@ int main()
 	}
 	
 //Finding Average waiting time	
-	int SumWT=0;
+	int sumwt=0;
 	for(i=0;i<n;i++)
 	{
-		SumWT+=Wt[i];
+		sumwt+=Wt[i];
 	}
-	float AvgWT=(float)SumWT/(float)n;
+	float avgwt=(float)sumwt/(float)n;
 	
 //Finding Average Turn Around time
-	int SumTA=0;
+	int sumta=0;
 	for(i=0;i<n;i++)
 	{
-		SumTA+=Ta[i];
+		sumta+=Ta[i];
 	}
-	float AvgTa=(float)SumTA/(float)n;
+	float avgta=(float)sumta/(float)n;
 	
-	printf("\nAverage Waiting Time = %f milliseconds\nAverage Turnaround time = %f milliseconds\n",AvgWT,AvgTa);
+	printf("\nAverage Waiting Time = %f milliseconds\nAverage Turnaround time = %f milliseconds\n",avgwt,avgta);
 	
 	return 0;
 }
